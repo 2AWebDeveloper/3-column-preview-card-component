@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.938rem;
+    background-color: var(--very-light-gray);
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 57.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1.75rem;
+    padding: 3rem;
+}
+.card-title {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+.card-text {
+    color: var(--transparent-white);
+    line-height: 1.7;
+}
+.card-button {
+    margin-top: 3.375rem;
+    padding: 0.75rem 1.875rem;
+    background-color: var(--very-light-gray);
+    outline: none;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 100px;
+    cursor: pointer;
+    font: inherit;
+    transition: all 0.2s ease 60ms;
+}
+.card-button:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+.card-button:active {
+    transform: scale(0.92);
+}
+.bg-orange {
+    background-color: var(--bright-orange);
+}
+.bg-cyan {
+    background-color: var(--dark-cyan);
+}
+.bg-dark-cyan {
+    background-color: var(--very-dark-cyan);
+}
+.text-orange {
+    color: var(--bright-orange);
+}
+.text-cyan {
+    color: var(--dark-cyan);
+}
+.text-dark-cyan {
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 1024px) {
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 32rem;
+    }
+    .card-button {
+        margin-top: 0.5rem;
+    }
+}
+@media (max-width: 767px) {
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 28rem;
+    }
+    .card-button {
+        margin-top: 0;
+    }
+}
